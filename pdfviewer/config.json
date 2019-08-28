@@ -7,7 +7,6 @@
   "webui": "http://[HOST]:[PORT:80]",
   "startup": "services",
   "ingress": true,
-  "ingress_port": 80,
   "panel_icon": "mdi:console",
   "panel_title": "Web",
   "boot": "auto",
