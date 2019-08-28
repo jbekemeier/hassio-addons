@@ -18,9 +18,9 @@
     "armv7",
     "i386"
   ],
-   "web": {
-   "ssl": true,
-   "certfile": "fullchain.pem",
-   "keyfile": "privkey.pem"
+  "web": {
+  "ssl": true,
+  "certfile": "fullchain.pem",
+  "keyfile": "privkey.pem"
   },
-}
+ }
