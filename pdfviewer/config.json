@@ -23,4 +23,4 @@
    "certfile": "fullchain.pem",
    "keyfile": "privkey.pem"
   },
- }
+}
