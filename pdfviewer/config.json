@@ -1,13 +1,15 @@
- {
+  {
   "name": "pdfviewer",
-  "version": "1",
+  "version": "dev",
   "slug": "pdfviewer",
-  "description": "PDF-Viewer for Home Assitant",
+  "description": "PDF-Viewer for Hassio",
   "url": "https://github.com/alexanderriechel/hassio-addons/pdfviewer",
-  "webui": "https://[HOST]:[PORT:80]",
+  "webui": "http://[HOST]:[PORT:80]",
   "startup": "services",
   "ingress": true,
-  "ingress_port": 0,
+  "ingress_port": 80,
+  "panel_icon": "mdi:console",
+  "panel_title": "Web",
   "boot": "auto",
   "options": {},
   "schema": {},
@@ -18,8 +20,11 @@
     "armv7",
     "i386"
   ],
-  "web": {
-  "ssl": true,
-  "certfile": "fullchain.pem",
-  "keyfile": "privkey.pem"
- },
+  "map": [
+    "config:rw",
+    "ssl:rw",
+    "addons:rw",
+    "share:rw",
+    "backup:rw"
+  ]
+  }
