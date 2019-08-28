@@ -4,42 +4,80 @@
   "slug": "pdfviewer",
   "description": "PDF-Viewer for Hassio",
   "url": "https://github.com/alexanderriechel/hassio-addons/pdfviewer",
+  "webui": "https://[HOST]:[PORT:80]",
+  "startup": "services",
+  "ingress": true,
+  "ingress_port": 0,
+  "panel_icon": "mdi:console",
   "arch": [
-    "armhf",
-    "armv7",
     "aarch64",
     "amd64",
+    "armhf",
+    "armv7",
     "i386"
   ],
-  "homeassistant": "0.91.1",
-  "startup": "application",
-  "webui": "http://[HOST]:[PORT:80]",
-  "ingress": true,
-  "panel_icon": "mdi:wrench",
+  "ports": {
+    "80/tcp": null
+  },
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "manager",
   "auth_api": true,
   "homeassistant_api": true,
-  "boot": "auto",
-  "map": [
-    "backup:rw",
-    "config:rw",
-    "share:rw",
-    "ssl:rw"
+  "host_network": true,
+  "auto_uart": true,
+  "apparmor": false,
+  "host_dbus": true,
+  "stdin": true,
+  "docker_api": true,
+  "full_access": true,
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN",
+    "SYS_RAWIO",
+    "SYS_TIME",
+    "SYS_NICE"
   ],
-  "ports": {
-    "443/tcp": null
-  },
-  "options": {
-    "dirsfirst": false,
-    "enforce_basepath": false,
-    "ignore_pattern": [
-      "__pycache__"
-    ]
+  "devices": [
+    "/dev/mem:/dev/mem:rwm"
+  ],
+  "map": [
+    "config:rw",
+    "ssl:rw",
+    "addons:rw",
+    "share:rw",
+    "backup:rw"
+  ],
+    "web": {
+      "ssl": true,
+      "certfile": "fullchain.pem",
+      "keyfile": "privkey.pem"
+    },
+    "share_sessions": true,
+    "packages": [],
+    "init_commands": []
   },
   "schema": {
-    "dirsfirst": "bool",
-    "enforce_basepath": "bool",
-    "ignore_pattern": [
-      "str"
-    ]
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
+    "ssh": {
+      "username": "str",
+      "password": "str",
+      "authorized_keys": ["str"],
+      "sftp": "bool",
+      "compatibility_mode": "bool",
+      "allow_agent_forwarding": "bool",
+      "allow_remote_port_forwarding": "bool",
+      "allow_tcp_forwarding": "bool"
+    },
+    "web": {
+      "ssl": "bool",
+      "certfile": "str",
+      "keyfile": "str"
+    },
+    "share_sessions": "bool",
+    "packages": ["str"],
+    "init_commands": ["str"],
+    "i_like_to_be_pwned": "bool?",
+    "leave_front_door_open": "bool?"
   }
 }
