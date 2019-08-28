@@ -1,6 +1,6 @@
   {
   "name": "pdfviewer",
-  "version": "dev",
+  "version": "0.1",
   "slug": "pdfviewer",
   "description": "PDF-Viewer for Hassio",
   "url": "https://github.com/alexanderriechel/hassio-addons/pdfviewer",
