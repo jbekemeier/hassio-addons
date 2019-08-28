@@ -19,11 +19,9 @@
     "i386"
   ],
   "ports": {
-    "22/tcp": 22,
     "80/tcp": null
   },
   "ports_description": {
-    "22/tcp": "SSH server port (make empty to disable)",
     "80/tcp": "Web Terminal (Not required for Hass.io Ingress)"
   },
   "boot": "auto",
