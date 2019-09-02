@@ -1,9 +1,9 @@
   {
-  "name": "pdfviewer",
+  "name": "pdftohtml",
   "version": "0.1",
-  "slug": "pdfviewer",
-  "description": "PDF-Viewer for Hassio",
-  "url": "https://github.com/alexanderriechel/hassio-addons/pdfviewer",
+  "slug": "pdftohtml",
+  "description": "PDF to HTML converter for Homeassitant",
+  "url": "https://github.com/buktahula/hassio-addons/pdfviewer",
   "webui": "http://[HOST]:[PORT:80]",
   "startup": "services",
   "ingress": true,
