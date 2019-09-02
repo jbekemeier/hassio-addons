@@ -9,4 +9,3 @@ RUN apt-get -qqy update && \
     rm -rf /var/lib/apt/lists/*
     
 CMD ["pdf2htmlEX /config/pdftohtml/vertretungsplan.pdf"]
-CMD ["cp /config/pdftohtml/vertretungsplan.html /config/www/"]
