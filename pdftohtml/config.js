@@ -19,5 +19,12 @@
     "armhf",
     "armv7",
     "i386"
+  ],
+    "map": [
+    "config:rw",
+    "ssl:rw",
+    "addons:rw",
+    "share:rw",
+    "backup:rw"
   ]
   }
