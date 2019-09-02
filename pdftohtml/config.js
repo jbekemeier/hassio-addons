@@ -3,7 +3,7 @@
   "version": "0.1",
   "slug": "pdftohtml",
   "description": "PDF to HTML converter for Homeassitant",
-  "url": "https://github.com/buktahula/hassio-addons/pdfviewer",
+  "url": "https://github.com/buktahula/hassio-addons/pdftohtml",
   "webui": "http://[HOST]:[PORT:80]",
   "startup": "services",
   "ingress": true,
