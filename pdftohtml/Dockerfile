@@ -8,4 +8,7 @@ RUN apt-get -qqy update && \
     apt-get -qqy install pdf2htmlex && \
     rm -rf /var/lib/apt/lists/*
     
-CMD ["pdf2htmlEX ~/config/pdftohtml/vertretungsplan.pdf"]
+# Copy data for add-on
+COPY run.sh /
+
+CMD [ "/run.sh" ]
