@@ -8,4 +8,4 @@ RUN apt-get -qqy update && \
     apt-get -qqy install pdf2htmlex && \
     rm -rf /var/lib/apt/lists/*
     
-CMD ["pdf2htmlEX /config/pdftohtml/vertretungsplan.pdf"]
+CMD ["pdf2htmlEX ~/config/pdftohtml/vertretungsplan.pdf"]
