@@ -15,6 +15,11 @@
     "armv7",
     "i386"
   ],
+   "options": {
+   "Pfade": [
+     {
+       "PDF Pfad": "",
+     },
     "map": [
     "config:rw",
     "ssl:rw",
