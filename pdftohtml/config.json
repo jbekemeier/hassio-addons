@@ -20,6 +20,8 @@
      {
        "PDF Pfad": "",
      },
+     ],
+     },
     "map": [
     "config:rw",
     "ssl:rw",
