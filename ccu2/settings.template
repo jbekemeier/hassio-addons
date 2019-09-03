@@ -1,0 +1,38 @@
+#Rega Port
+: ${CCU_REGA_PORT:=80}
+
+#Rfd Port
+: ${CCU_RFD_PORT:=2001}
+
+#HM IP Port
+: ${CCU_IP_PORT:=2010}
+
+#TclRegaScript Port
+: ${CCU_TCLREGASCRIPT_PORT:=8181}
+
+#ssh Port
+: ${CCU_SSH_PORT:=2222}
+
+#Name of the docker volume where CCU data will persist
+#It can be a local location as well such as a mounted NAS folder, cluster fs (glusterfs), etc.
+: ${DOCKER_CCU_DATA:="ccu_data"}
+
+#Docker ID is used to push built image to a docker repository (needed for docker swarm)
+: ${DOCKER_REPO:="angelnu/ccu"}
+
+#CCU version to build
+: ${CCU_VERSION:="3.45.7"}
+MAYOR_CCU_VERSION=${CCU_VERSION%%.*}
+
+#Docker TAG for the DOCKER_ID - this is the version to download
+#Values <mayor version> or <complete version>: "3" "3.41.11"
+: ${DOCKER_TAG:="${MAYOR_CCU_VERSION}"}
+
+#Name of the container/service instance
+: ${DOCKER_NAME:="ccu"}
+
+#Run with docker swarm?
+: ${DOCKER_MODE:="single"}
+
+#Additional options for docker create service / docker run
+: ${DOCKER_OPTIONS:=""}
