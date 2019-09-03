@@ -11,4 +11,4 @@ RUN apt-get -qqy update && \
 # Copy data for add-on
 COPY run.sh /
 RUN  chmod +x /run.sh  
-ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
+CMD ["/run.sh"]
