@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "S13irqbalance - skipping"
-exit 0
