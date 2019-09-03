@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "S45ifplugd - skipping"
-exit 0
