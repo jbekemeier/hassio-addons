@@ -1,1 +1,1 @@
-pdf2htmlEX /config/pdftohtml/vertretungsplan.pdf /www/vertretungsplan.html
+pdf2htmlEX /config/pdftohtml/vertretungsplan.pdf /config/www/vertretungsplan.html
