@@ -1,0 +1,59 @@
+#!/bin/sh
+
+echo "S01InitHost - defaults"
+
+: ${HM_MODE:="NORMAL"}
+: ${HM_RTC:=""}
+
+echo "Checking device"
+if [ -e "/dev/raw-uart" ]; then
+  echo "Detected piVCCU kernel module"
+  : ${HM_HOST:="pivvcu"}
+  : ${HM_HOST_GPIO_UART:="/dev/raw-uart"}
+  : ${HM_HOST_GPIO_RESET:=""}
+elif grep -qi "BCM2835" /proc/cpuinfo; then
+  echo "Detected Raspberry PI"
+  : ${HM_HOST:="Raspberry Pi"}
+  : ${HM_HOST_GPIO_UART:="/dev_org/ttyAMA0"}
+  : ${HM_HOST_GPIO_RESET:="18"}
+elif grep -qi "Allwinner sun8i" /proc/cpuinfo; then /* TBD check value returned by cpuinfo for Orange */
+  echo "Detected Orange Pi"
+  : ${HM_HOST:="Orange Pi"}
+  : ${HM_HOST_GPIO_UART:="/dev_org/ttyS3"}
+  : ${HM_HOST_GPIO_RESET:="110"}
+else
+  echo "PiVCCU kernel module is not installed and did not recognize HW $(grep Hardware /proc/cpuinfo)"
+  echo "-> Homematic PCB adapter will not work!!!"
+  : ${HM_HOST:="Unknown"}
+  : ${HM_HOST_GPIO_UART:=""}
+  : ${HM_HOST_GPIO_RESET:=""}
+fi
+
+: ${HM_LED_GREEN:=""}
+: ${HM_LED_RED:=""}
+: ${HM_LED_YELLOW:=""}
+
+HM_LED_GREEN_MODE1="none"
+HM_LED_GREEN_MODE2="none"
+HM_LED_RED_MODE1="none"
+HM_LED_RED_MODE2="none"
+HM_LED_YELLOW_MODE1="none"
+HM_LED_YELLOW_MODE2="none"
+
+
+if [ -e /sys/devices/virtual/eq3loop ]; then
+  EQ3LOOP_MAJOR=`cat /sys/devices/virtual/eq3loop/eq3loop/dev | cut -d: -f1`
+  #These are the only ones added at runtime by mutimacd
+  mknod -m 666 /dev/mmd_hmip c $EQ3LOOP_MAJOR 1
+  mknod -m 666 /dev/mmd_bidcos c $EQ3LOOP_MAJOR 2
+fi
+
+
+# save all changed HM_ env variables
+set | grep '^HM_' >>/var/hm_mode
+#Eliminate duplicates
+. /var/hm_mode
+set | grep '^HM_' >/var/hm_mode
+
+#!/bin/sh
+exit 0
