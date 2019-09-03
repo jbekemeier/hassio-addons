@@ -9,7 +9,7 @@ RUN apt-get -qqy update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy data for add-on
-#COPY run.sh /
-#RUN  chmod +x run.sh  
+COPY run.sh /
+RUN  chmod +x run.sh  
 #CMD [ "/run.sh" ]
-CMD [ "pdf2htmlEX /config/pdftohtml/vertretungsplan.pdf" ]
+CMD [ "/bin/bash" ]
