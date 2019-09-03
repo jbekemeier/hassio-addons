@@ -36,4 +36,4 @@ COPY LICENSE entrypoint.sh /
 
 CMD ["/entrypoint.sh"]
 VOLUME /usr/local
-EXPOSE 8080 2001 8181
+EXPOSE 80 2001 8181
