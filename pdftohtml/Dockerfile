@@ -9,7 +9,7 @@ RUN apt-get -qqy update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy data for add-on
-COPY run.sh /
-RUN  chmod +x run.sh  
-#CMD [ "/run.sh" ]
+COPY run.sh /config/pdftohtml/
+RUN  chmod +x /config/pdftohtml/run.sh  
+#CMD [ "/config/pdftohtml/run.sh" ]
 CMD [ "/bin/bash" ]
