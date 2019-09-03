@@ -1,2 +1,2 @@
 #!/bin/bash
-pdf2htmlEX /config/pdftohtml/vertretungsplan.pdf /config/www/vertretungsplan.html
+pdf2htmlEX /config/www/pdf/vertretungsplan.pdf /config/www/vertretungsplan.html
