@@ -1,7 +1,7 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+#Dockerfile to build a pdf2htmlEx image
+FROM debian:stretch
 
-ENV LANG C.UTF-8
+ENV REFRESHED_AT 20151007
 
 # update debian source list
 RUN apt-get -qqy update && \
