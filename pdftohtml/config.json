@@ -16,12 +16,20 @@
     "i386"
   ],
    "options": {
-       "Quelle": "/config/",
-       "Ziel": "/www/"
+     "config": [
+       {
+       "quelle": "/config/",
+       "ziel": "/www/"
+       }
+      ]
      },
    "schema": {
-      "Quelle": "str",
-      "Ziel": "str"
+     "config": [
+       {
+      "quelle": "str",
+      "ziel": "str"
+       }
+      ]
      },
     "map": [
     "config:rw",
