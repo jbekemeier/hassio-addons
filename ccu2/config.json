@@ -8,7 +8,7 @@
   "webui": "http://[HOST]:[PORT:80]",
   "startup": "services",
   "ingress": true,
-  "ingress_port": ,
+  "ingress_port": 0,
   "panel_icon": "mdi:console",
   "panel_title": "CCU2",
   "boot": "auto",
