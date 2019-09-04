@@ -16,8 +16,8 @@
    "options": {
      "config": [
        {
-       "quelle": "/config/",
-       "ziel": "/www/"
+       "quelle": "/config/www/",
+       "ziel": "/config/www/"
        }
       ]
      },
