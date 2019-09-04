@@ -1,5 +1,5 @@
-#Dockerfile to build a pdf2htmlEx image
-FROM debian:stretch
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 ENV REFRESHED_AT 20151007
 
