@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-ENV REFRESHED_AT 20151007
+ENV LANG C.UTF-8
 
 # update debian source list
 RUN apt-get -qqy update && \
