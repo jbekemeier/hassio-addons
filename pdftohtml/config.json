@@ -6,8 +6,6 @@
   "url": "https://github.com/buktahula/hassio-addons/pdftohtml",
   "startup": "services",
   "boot": "auto",
-  "options": {},
-  "schema": {},
   "arch": [
     "aarch64",
     "amd64",
