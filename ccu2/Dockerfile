@@ -10,10 +10,10 @@ ARG CCU2_SERIAL="ccu2_docker"
 ARG CCU2_FW_LINK="http://update.homematic.com/firmware/download?cmd=download&version=${CCU2_VERSION}&serial=${CCU2_SERIAL}&lang=de&product=HM-CCU2"
 
 RUN echo "Downloading from $CCU2_FW_LINK " \
-    && wget $CCU2_FW_LINK -O -|tar -xz rootfs.ubi
+&& wget $CCU2_FW_LINK -O -|tar -xz rootfs.ubi
 
 RUN apt update \
-  && apt install -y gcc liblzo2-dev openssl
+&& apt install -y gcc liblzo2-dev openssl
 
 #https://github.com/jrspruitt/ubi_reader
 RUN pip install ubi_reader python-lzo
