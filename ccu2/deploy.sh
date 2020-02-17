@@ -37,7 +37,7 @@ if [ $DOCKER_MODE = swarm ] ; then
   #Install service that corrects permissions
   echo
   echo "Start ccu2 service"
-  cp -a enableCCUDevices.sh /usr/local/sbin
+  cp -a enableCCUDevices.sh /config/custom_components/ccu/sbin
   cp enableCCUDevices.service /etc/systemd/system/enableCCUDevices.service
   systemctl enable enableCCUDevices
   service enableCCUDevices restart
