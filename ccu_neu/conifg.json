@@ -1,7 +1,7 @@
   {
-  "name": "CCU2",
+  "name": "CCU_neu",
   "version": "0.2",
-  "slug": "ccu2",
+  "slug": "ccu_neu",
   "description": "Homematic CCU2 for Homeassistant",
   "url": "https://github.com/buktahula/docker-ccu/",
   "webui": "http://[HOST]:[PORT:80]",
@@ -21,7 +21,7 @@
   "ingress": true,
   "ingress_port": 0,
   "panel_icon": "mdi:console",
-  "panel_title": "CCU2",
+  "panel_title": "CCU neu",
   "boot": "auto",
   "options": {},
   "schema": {},
