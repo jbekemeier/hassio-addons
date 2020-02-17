@@ -7,13 +7,13 @@ ARG CCU2_VERSION="2.41.5"
 ARG CCU2_SERIAL="ccu2_docker"
 
 #URL used by CCU2 to download firmware
-ARG CCU2_FW_LINK="http://update.homematic.com/firmware/download?cmd=download&version=2.41.5&serial=ccu2_docker&lang=de&product=HM-CCU2"
+ARG CCU2_FW_LINK="http://update.homematic.com/firmware/download?cmd=download&version=${CCU2_VERSION}&serial=${CCU2_SERIAL}&lang=de&product=HM-CCU2"
 
-RUN echo "Downloading from $CCU2_FW_LINK " \
-&& wget http://update.homematic.com/firmware/download?cmd=download&version=2.41.5&serial=ccu2_docker&lang=de&product=HM-CCU2 -O -|tar -xz rootfs.ubi
+RUN echo "Downloading from $CCU2_FW_LINK" && \ 
+wget $CCU2_FW_LINK -O -|tar -xz rootfs.ubi
 
-RUN apt update \
-&& apt install -y gcc liblzo2-dev openssl
+RUN apt update && \
+apt install -y gcc liblzo2-dev openssl
 
 #https://github.com/jrspruitt/ubi_reader
 RUN pip install ubi_reader python-lzo
@@ -33,7 +33,6 @@ RUN wget $QEMU_TGZ -O - |tar -xz -C ubi/*/root/usr/bin
 FROM scratch
 COPY --from=builder ubi/*/root /
 COPY LICENSE entrypoint.sh /
-
 
 CMD ["/entrypoint.sh"]
 VOLUME /config/custom_components/ccu
