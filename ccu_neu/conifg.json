@@ -1,0 +1,45 @@
+  {
+  "name": "CCU2",
+  "version": "0.2",
+  "slug": "ccu2",
+  "description": "Homematic CCU2 for Homeassistant",
+  "url": "https://github.com/buktahula/docker-ccu/",
+  "webui": "http://[HOST]:[PORT:80]",
+  "ports": {
+   "80/tcp": null,
+   "2001/tcp": 2001,
+   "2000/tcp": 2000,
+   "2010/tcp": 2010
+  },
+   "ports_description": {
+    "80/tcp": "ReGaHss Webinterface",
+    "2001/tcp": "Homematic xmlrpc",
+    "2000/tcp": "HomematicWire xmlrpc",
+    "2010/tcp": "HomematicIP xmlrpc"
+  },
+  "startup": "system",
+  "ingress": true,
+  "ingress_port": 0,
+  "panel_icon": "mdi:console",
+  "panel_title": "CCU2",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+    "map": [
+    "config:rw",
+    "ssl:rw",
+    "addons:rw",
+    "share:rw",
+    "backup:rw"
+  ],
+  "environment": {
+    "PERSISTENT_DIR": "/config/custom_components/ccu"
+  }
+  }
