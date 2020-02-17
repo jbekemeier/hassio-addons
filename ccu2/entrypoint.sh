@@ -1,5 +1,5 @@
 #!/bin/sh
-LOCAL_PERSISTENT_DIR=/usr/local/
+LOCAL_PERSISTENT_DIR=/config/custom_components/ccu
 
 if [ -n "$PERSISTENT_DIR" ] ; then
   echo "Copying from $PERSISTENT_DIR to $LOCAL_PERSISTENT_DIR"
