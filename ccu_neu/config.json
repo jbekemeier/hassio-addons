@@ -2,7 +2,7 @@
   "name": "ccu_neu",
   "version": "0.1",
   "slug": "ccu_neu",
-  "description": "Homematic CCU for Homeassistant",
+  "description": "CCU for Homeassistant",
   "url": "https://github.com/buktahula/hassio_addons/ccu_neu",
   "webui": "http://[HOST]:[PORT:80]",
   "ports": {
