@@ -1,7 +1,7 @@
     
   {
   "name": "CCU2",
-  "version": "0.1",
+  "version": "0.2",
   "slug": "ccu2",
   "description": "Homematic CCU2 for Homeassistant",
   "url": "https://github.com/buktahula/hassio-addons/ccu2",
