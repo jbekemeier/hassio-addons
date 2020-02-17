@@ -1,5 +1,5 @@
 #!/bin/sh
-LOCAL_PERSISTENT_DIR=/usr/local/
+LOCAL_PERSISTENT_DIR=/config/custom_components/ccu
 echo "Checking device"
 if grep -qi Raspberry /sys_org/firmware/devicetree/base/model; then
   echo "Detected Raspberry"
