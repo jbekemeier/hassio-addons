@@ -30,5 +30,5 @@ COPY --from=builder ubi/*/root /
 COPY LICENSE entrypoint.sh /
 
 CMD ["/entrypoint.sh"]
-VOLUME /usr/local
+VOLUME /config/custom_components/ccu
 EXPOSE 80 2001 8181
