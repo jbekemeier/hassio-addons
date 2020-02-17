@@ -1,6 +1,6 @@
   {
   "name": "ccu_neu",
-  "version": "0.2",
+  "version": "0.1",
   "slug": "ccu_neu",
   "description": "Homematic CCU for Homeassistant",
   "url": "https://github.com/buktahula/hassio_addons/ccu_neu",
