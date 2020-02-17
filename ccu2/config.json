@@ -41,6 +41,6 @@
     "backup:rw"
   ],
   "environment": {
-    "PERSISTENT_DIR": "/config/custom_components/ccu/"
+    "PERSISTENT_DIR": "/custom_components/ccu"
   }
   }
