@@ -2,7 +2,7 @@
   "name": "ccu_neu",
   "version": "0.2",
   "slug": "ccu_neu",
-  "description": "Homematic CCU2 for Homeassistant",
+  "description": "Homematic CCU for Homeassistant",
   "url": "https://github.com/buktahula/hassio_addons/ccu_neu",
   "webui": "http://[HOST]:[PORT:80]",
   "ports": {
@@ -21,7 +21,7 @@
   "ingress": true,
   "ingress_port": 0,
   "panel_icon": "mdi:console",
-  "panel_title": "CCU neu",
+  "panel_title": "CCU",
   "boot": "auto",
   "options": {},
   "schema": {},
