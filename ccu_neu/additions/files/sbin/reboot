@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "Rebooting CCU container"
-kill 1
