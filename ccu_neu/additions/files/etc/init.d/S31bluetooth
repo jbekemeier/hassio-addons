@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "S31bluetooth - skipping"
-exit 0
