@@ -1,46 +1,35 @@
-    
-  {
-  "name": "CCU2",
-  "version": "0.2",
-  "slug": "ccu2",
-  "description": "Homematic CCU2 for Homeassistant",
-  "url": "https://github.com/buktahula/hassio-addons/ccu2",
-  "webui": "http://[HOST]:[PORT:80]",
-  "ports": {
-   "80/tcp": null,
-   "2001/tcp": 2001,
-   "2000/tcp": 2000,
-   "2010/tcp": 2010
-  },
-   "ports_description": {
-    "80/tcp": "ReGaHss Webinterface",
-    "2001/tcp": "Homematic xmlrpc",
-    "2000/tcp": "HomematicWire xmlrpc",
-    "2010/tcp": "HomematicIP xmlrpc"
-  },
-  "startup": "system",
-  "ingress": true,
-  "ingress_port": 0,
-  "panel_icon": "mdi:console",
-  "panel_title": "CCU2",
-  "boot": "auto",
-  "options": {},
-  "schema": {},
-  "arch": [
-    "aarch64",
-    "amd64",
-    "armhf",
-    "armv7",
-    "i386"
-  ],
-    "map": [
-    "config:rw",
-    "ssl:rw",
-    "addons:rw",
-    "share:rw",
-    "backup:rw"
-  ],
-  "environment": {
-    "PERSISTENT_DIR": "/config/custom_components/ccu"
-  }
-  }
+---  
+name: CCU2
+version: 0.3
+slug: ccu2
+description: Homematic CCU2 for Homeassistant
+url: https://github.com/buktahula/hassio-addons/ccu2
+watchdog: tcp://[HOST]:[PORT:80]
+ingress: true
+ingress_stream: true
+panel_title: CCU2
+panel_icon: mdi:router-wireless
+startup: services
+map:
+  - backup:rw
+init: false
+timeout: 120
+ports: 
+ 80/tcp: null
+ 2001/tcp: 2001
+ 2000/tcp: 2000
+ 2010/tcp: 2010
+ports_description": {
+ 80/tcp": "Webinterface",
+ 2001/tcp": "Homematic xmlrpc",
+ 2000/tcp": "HomematicWire xmlrpc",
+ 2010/tcp": "HomematicIP xmlrpc"
+environment:
+  HM_RUNNING_IN_HA: "1"
+  HM_HAPROXY_SRC: 172.30.32.2/32
+privileged:
+  - IPC_LOCK
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - SYS_RESOURCE
+  - NET_ADMIN
