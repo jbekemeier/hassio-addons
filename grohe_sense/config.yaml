@@ -1,0 +1,16 @@
+version: "1.0"
+slug: grohe_sense
+name: Grohe Sense
+url: https://github.com/Buktahula/hassio-addons/new/master/grohe_sense
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+boot: manual
+description: integrate Grohe Sens and Grohe Blue 
+options: {}
+schema: {}
+startup: once
+init: false
