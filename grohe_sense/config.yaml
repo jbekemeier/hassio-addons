@@ -9,7 +9,7 @@ arch:
   - amd64
   - i386
 boot: manual
-description: integrate Grohe Sens and Grohe Blue 
+description: integrate Grohe Sense and Grohe Blue 
 options: {}
 schema: {}
 startup: once
