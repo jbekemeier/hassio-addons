@@ -1,4 +1,4 @@
 # Pull base image
-FROM balenalib/aarch64-ubuntu-node:14-bionic
+FROM python:alpine3.17
 # Define default command
 CMD ["/bin/sh"]
