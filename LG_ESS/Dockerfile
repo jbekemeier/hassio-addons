@@ -2,7 +2,7 @@
 FROM resin/rpi-raspbian:wheezy
 
 # Install dependencies
-RUN apt-get update && apt-get install -y 
+RUN apt-get update
 
 # Define default command
 CMD ["bash"]
