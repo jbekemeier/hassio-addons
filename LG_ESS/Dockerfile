@@ -1,3 +1,3 @@
-FROM balenalib/raspberry-pi-alpine-python:latest
+FROM python:alpine3.17
 
-CMD ["/bin/sh"]
+RUN /bin/sh
