@@ -1,4 +1,4 @@
-name": "LG ESS"
+name: "LG ESS"
 version: "0.0.1"
 description: LG ESS for Hassio
 slug: lg_ess
@@ -9,8 +9,8 @@ init: false
 options: {}
 schema: {}
 arch: 
-  - aarch64
-  - amd64
-  - armhf
-  - armv7
-  - i386
+ - aarch64
+ - amd64
+ - armhf
+ - armv7
+ - i386
