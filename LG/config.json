@@ -1,8 +1,8 @@
   {
-  "name": "LG",
+  "name": "LG ESS",
   "version": "0.1",
-  "slug": "LG",
-  "description": "LG Solar for Hassio",
+  "slug": "LG ESS",
+  "description": "LG ESS for Hassio",
   "url": "https://github.com/buktahula/hassio-addons/LG",
   "webui": "http://[HOST]:[PORT:80]",
   "startup": "services",
