@@ -2,7 +2,7 @@ name: LG ESS
 version: dev
 description: LG ESS for Hassio
 slug: lg_ess
-url: https://github.com/buktahula/hassio-addons/LG
+url: https://github.com/buktahula/hassio-addons/LG_ESS
 init: false
 arch: 
  - aarch64
