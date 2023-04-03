@@ -3,7 +3,7 @@ FROM ubuntu:latest
 USER root
 
 # Install dependencies required to git clone.
-RUN 
+RUN \
 apt-get update && \
 apt-get -y upgrade && \
 apt-get install git -y && \
