@@ -1,5 +1,7 @@
 # Pull base image
-FROM resin/rpi-raspbian:wheezy
+FROM arm32v7/python:3
+
+WORKDIR /usr/src/app
 
 # Install dependencies
 RUN apt-get update
