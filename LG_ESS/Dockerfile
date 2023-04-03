@@ -11,4 +11,4 @@ WORKDIR /data
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+CMD ["/bin/sh"]
