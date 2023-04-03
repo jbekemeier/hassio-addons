@@ -1,4 +1,3 @@
-# Pull base image
-FROM balenalib/aarch64-ubuntu-node:14-bionic
+FROM FROM balenalib/aarch64-ubuntu-node:14-bionic
 # Define default command
 CMD ["/bin/sh"]
