@@ -1,5 +1,5 @@
 # Pull base image
-FROM arm32v7/python:3
+FROM balenalib/raspberry-pi-debian-python:latest
 
 WORKDIR /usr/src/app
 
