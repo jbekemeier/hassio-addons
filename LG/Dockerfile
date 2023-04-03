@@ -17,8 +17,3 @@ RUN git clone git@https://github.com/gluap/pyess.git
 WORKDIR /data/lgess
 
 RUN npm i
-
-COPY run.sh /
-RUN chmod a+x /run.sh
-
-CMD [ "/run.sh" ]
