@@ -4,8 +4,7 @@ FROM ubuntu:latest
 ARG SSH_KEY
 
 # Install dependencies required to git clone.
-RUN apk update \
-   && apk add --update git
+RUN apt-get update
     
 # 1. Create the SSH directory.
 
@@ -15,7 +14,5 @@ RUN mkdir -p /root/.ssh/ && \
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
  
 RUN git clone git@https://github.com/gluap/pyess.git
-
-WORKDIR /data/lgess
 
 RUN npm i
