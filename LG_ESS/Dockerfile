@@ -1,19 +1,8 @@
-FROM ubuntu:latest
-
-USER root
+FROM python:alpine3.17
 
 # Install dependencies required to git clone.
-RUN \
-apt-get update && \
-apt-get -y upgrade && \
-apt-get install git -y && \
+RUN apk update && apk upgrade && \
 git clone https://github.com/gluap/pyess.git
 
-# Set environment variables.
-ENV HOME /root
-
-# Define working directory.
-WORKDIR /root
-
 # Define default command.
-CMD ["bash"]
+RUN /bin/sh 
