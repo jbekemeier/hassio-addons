@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+USER root
+
 # Take an SSH key as a build argument.
 ARG SSH_KEY
 
