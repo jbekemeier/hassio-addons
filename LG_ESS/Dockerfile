@@ -7,4 +7,4 @@ RUN apt-get update
 RUN apt-get install git -y
 RUN git clone https://github.com/gluap/pyess.git
 
-CMD ["/bin/bash"]
+RUN /bin/bash
