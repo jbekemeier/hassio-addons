@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.2.5
 FROM $BUILD_FROM
 
 # Install requirements for add-on
