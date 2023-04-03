@@ -1,4 +1,4 @@
 # Pull base image
-FROM arm64v8/ubuntu
+FROM python:alpine3.17
 # Define default command
-CMD ["bash"]
+RUN /bin/sh
