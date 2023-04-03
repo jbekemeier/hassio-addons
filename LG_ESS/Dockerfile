@@ -4,8 +4,8 @@ FROM ubuntu:latest
 ARG SSH_KEY
 
 # Install dependencies required to git clone.
-RUN apk update && \
-    apk add --update git
+RUN apk update \
+   && apk add --update git
     
 # 1. Create the SSH directory.
 
