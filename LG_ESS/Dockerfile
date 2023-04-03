@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     python-virtualenv \
-    --no-install-recommends && \
+    --no-install-recommends
 
 # Define working directory
 WORKDIR /data
