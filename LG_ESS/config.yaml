@@ -1,12 +1,8 @@
-name: "LG ESS"
-version: "0.0.1"
+name: LG ESS
+version: dev
 description: LG ESS for Hassio
 slug: lg_ess
 url: https://github.com/buktahula/hassio-addons/LG
-boot: manual
-init: false
-options: {}
-schema: {}
 arch: 
  - aarch64
  - amd64
