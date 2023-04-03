@@ -1,0 +1,12 @@
+name": "LG ESS"
+description": "LG ESS for Hassio"
+version": "0.0.1"
+slug": "LG ESS"
+url": "https://github.com/buktahula/hassio-addons/LG"
+startup": services
+arch": 
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
