@@ -5,7 +5,3 @@ slug: lg_ess
 url: https://github.com/buktahula/hassio-addons/LG
 arch: 
  - aarch64
- - amd64
- - armhf
- - armv7
- - i386
