@@ -1,10 +1,4 @@
 # Pull base image
-FROM balenalib/raspberry-pi-debian-python:latest
-
-WORKDIR /usr/src/app
-
-# Install dependencies
-RUN apt-get update
-
+FROM arm64v8/ubuntu
 # Define default command
 CMD ["bash"]
