@@ -1,6 +1,6 @@
 FROM python:alpine3.17
 
-WORKDIR /app
+WORKDIR /data
 
 RUN apt-get update && \
     apt-get install -y git
@@ -14,6 +14,11 @@ RUN chmod 600 /root/.ssh/id_rsa
 
 RUN git clone git@https://github.com/gluap/pyess.git
 
-WORKDIR /app/lgess
+WORKDIR /data/lgess
 
 RUN npm i
+
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
