@@ -3,7 +3,6 @@ version: "0.0.1"
 description: LG ESS for Hassio
 slug: lg_ess
 url: https://github.com/buktahula/hassio-addons/LG
-startup: once
 boot: manual
 init: false
 options: {}
