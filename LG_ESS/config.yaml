@@ -8,6 +8,6 @@ arch:
  - aarch64
 startup: before
 options:
- - MQTT_HOST=$(bashio::services mqtt "host")
- - MQTT_USER=$(bashio::services mqtt "username")
- - MQTT_PASSWORD=$(bashio::services mqtt "password")
+ MQTT_HOST: []
+ MQTT_USER: []
+ MQTT_PASSWORD: []
