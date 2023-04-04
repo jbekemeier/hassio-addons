@@ -12,8 +12,6 @@ RUN apt-get update \
     && git clone --depth 1 \
         "https://github.com/gluap/pyess" \
     \
-    && apt-get purge -y --auto-remove \
-        git \
-        
+    
 WORKDIR /
 COPY rootfs /
