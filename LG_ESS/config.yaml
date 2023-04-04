@@ -7,7 +7,3 @@ init: false
 arch: 
  - aarch64
 startup: before
-options:
- MQTT_HOST: []
- MQTT_USER: []
- MQTT_PASSWORD: []
