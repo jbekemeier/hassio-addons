@@ -16,8 +16,8 @@ RUN \
         p8-platform-dev \
         swig \
         linux-headers \
-    && git clone --depth 1 -b libcec-${LIBCEC_VERSION} \
-        "https://github.com/Pulse-Eight/libcec" libcec \
+    && git clone --depth 1 \
+        "https://github.com/Buktahula/pyess" \
     && mkdir -p libcec/build \
     && cd libcec/build \
     && cmake \
@@ -31,4 +31,3 @@ RUN \
 
 # Copy data
 WORKDIR /
-COPY rootfs /
