@@ -7,8 +7,3 @@ init: false
 arch: 
  - aarch64
 startup: before
-hassio_api: true
-options:
- - MQTT_HOST=$(bashio::services mqtt "host")
- - MQTT_USER=$(bashio::services mqtt "username")
- - MQTT_PASSWORD=$(bashio::services mqtt "password")
