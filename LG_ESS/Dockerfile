@@ -10,6 +10,5 @@ RUN \
         build-base \
         py3-pip \
         python3=~3.9 \
-    && pip install pyess
-    
+
 WORKDIR /
