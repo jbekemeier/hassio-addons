@@ -7,8 +7,8 @@ WORKDIR /usr/src
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         git \
-    && git clone --depth 1 -b pyess-${PYESS_VERSION} \
-        "https://github.com/gluap/" pyess \
+    && git clone --depth 1 -b ${PYESS_VERSION} \
+        "https://github.com/gluap/pyess" pyess \
     && mkdir -p pyess/build \
     && cd pyess/build \
     
