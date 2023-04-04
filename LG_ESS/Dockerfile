@@ -8,6 +8,5 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base \
         py3-pip \
-        python3 \
-        
+        python3 
 WORKDIR /
