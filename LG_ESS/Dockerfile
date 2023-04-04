@@ -1,14 +1,20 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.2.5
-FROM $BUILD_FROM
+ARG BUILD_FROM
+FROM ${BUILD_FROM}
 
-# Install requirements for add-on
-RUN \
-  apk add --no-cache \
-    python3
-WORKDIR /data
+# Install LG ESS
+WORKDIR /usr/src
 
-# Copy data for add-on
-COPY run.sh /
-RUN chmod a+x /run.sh
-
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3 \
+        git \
+    \
+    && git clone --depth 1 \
+        "https://github.com/gluap/pyess" \
+    \
+    && apt-get purge -y --auto-remove \
+        git \
+        
+WORKDIR /
+COPY rootfs /
 CMD ["/bin/sh"]
