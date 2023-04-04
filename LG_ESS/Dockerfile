@@ -17,4 +17,3 @@ RUN apt-get update \
         
 WORKDIR /
 COPY rootfs /
-CMD ["/bin/sh"]
